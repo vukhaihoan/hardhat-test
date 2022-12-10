@@ -8,4 +8,7 @@ contract GoofyGoober is ERC20 {
     constructor() ERC20("GoofyGoober", "GG") {
         _mint(msg.sender, _initial_supply);
     }
+    function faucet() external payable {
+        _mint(msg.sender, 100 * (10**18));
+    }
 }
